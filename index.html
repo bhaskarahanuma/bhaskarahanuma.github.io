@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="InSaAF: Incorporating Safety Through Accuracy and Fairness - Are LLMs Ready for the Indian Legal Domain?">
+  <meta property="og:title" content="InSaAF: Incorporating Safety Through Accuracy and Fairness"/>
+  <meta property="og:description" content="Evaluating and improving LLMs for the Indian legal domain through Binary Statutory Reasoning"/>
+  <meta property="og:url" content="https://github.com/Raghav010/InSaAF"/>
+  <meta property="og:image" content="static/images/insaaf_banner.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="InSaAF: Incorporating Safety Through Accuracy and Fairness">
+  <meta name="twitter:description" content="Evaluating and improving LLMs for the Indian legal domain through Binary Statutory Reasoning">
+  <meta name="twitter:image" content="static/images/insaaf_banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="LLMs, Bias Mitigation, Responsible AI, Legal AI, Indian Legal Domain, Fairness, Binary Statutory Reasoning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>InSaAF: Incorporating Safety Through Accuracy and Fairness</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">InSaAF: Incorporating Safety Through Accuracy and Fairness</h1>
+
+
+<div class="is-size-5 publication-authors">
+  <span class="author-block">
+    <a href="https://www.linkedin.com/in/yogesh-tripathi-54b8531aa/" target="_blank">Yogesh Tripathi</a><sup>*</sup>,</span>
+  <span class="author-block">
+    <a href="https://www.linkedin.com/in/raghav-donakanti-96a433261" target="_blank">Raghav Donakanti</a><sup>*</sup>,</span>
+  <span class="author-block">
+    <a href="https://linkedin.com/in/sahil-girhepuje" target="_blank">Sahil Girhepuje</a><sup>*</sup>,</span>
+  <span class="author-block">
+    <a href="https://www.linkedin.com/in/ishan-kavathekar-241333214" target="_blank">Ishan Kavathekar</a>,</span>
+  <span class="author-block">
+    <a href="https://www.linkedin.com/in/bhaskara-hanuma/" target="_blank">Bhaskara Hanuma Vedula</a>,</span>
+</div>
+<div class="is-size-5 publication-authors">
+  <span class="author-block">
+    <a href="https://www.linkedin.com/in/gokul-s-krishnan-437a7654/" target="_blank">Gokul S Krishnan</a>,</span>
+  <span class="author-block">
+    <a href=" https://www.linkedin.com/in/agoel00/" target="_blank">Anmol Goel</a>,</span>
+    
+   
+  <span class="author-block">
+    <a href="https://sgoyal28.github.io/" target="_blank">Shreya Goyal</a>,</span>
+  <span class="author-block">
+    <a href="https://www.linkedin.com/in/balaraman-ravindran-427a307/" target="_blank">Balaraman Ravindran</a>,</span>
+  <span class="author-block">
+    <a href="https://www.linkedin.com/in/ponguru/" target="_blank">Ponnurangam Kumaraguru</a></span>
+</div>
+
+
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Centre for Responsible AI, IIT Madras | Precog, IIIT Hyderabad | AmexAI Labs</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <!-- Paper link -->
+                      <span class="link-block">
+                        <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA241266" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Github link -->
+                    <span class="link-block">
+                      <a href="https://github.com/Raghav010/InSaAF" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code & Dataset</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- The Problem Section -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">The Problem</h2>
+            <div class="content has-text-justified">
+              <p>
+                Large Language Models (LLMs) have demonstrated remarkable capabilities across various domains including Legal sector. But are they really ready? Especially for Indian Domain? Or they exhibit biases?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Problem Section -->
+    <!-- Teaser image-->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <img src="static/images/picture1.png" alt="LLaMA Bias Prediction" class="teaser-image">
+              <p class="has-text-centered image-caption">LLaMA predicts different outputs for prompts varying by only the identity of the individual (Christian vs. Hindu). Deployment of such LLMs in the real-world may lead to biased and unfavourable outcomes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End teaser -->
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Large Language Models (LLMs) have emerged as powerful tools to perform various tasks in the legal domain, ranging from generating summaries to predicting judgments. Despite their immense potential, these models have been proven to learn and exhibit societal biases and make unfair predictions. Hence, it is essential to evaluate these models prior to deployment. In this study, we explore the ability of LLMs to perform Binary Statutory Reasoning in the Indian legal landscape across various societal disparities. We present a novel metric, β-weighted Legal Safety Score (LSSβ), to evaluate the legal usability of the LLMs. Additionally, we propose a finetuning pipeline, utilising specialised legal datasets, as a potential method to reduce bias. Our proposed pipeline effectively reduces bias in the model, as indicated by improved LSSβ. This highlights the potential of our approach to enhance fairness in LLMs, making them more reliable for legal tasks in socially diverse contexts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!-- Methodology Section -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Methodology</h2>
+            <div class="content has-text-justified">
+              <p>The proposed work is divided into three components:</p>
+              <ol>
+                <li>Construction of a synthetic dataset</li>
+                <li>Quantifying the usability of LLMs in the Indian legal domain from the lens of Fairness-Accuracy tradeoff</li>
+                <li>Bias mitigation by finetuning the LLM</li>
+              </ol>
+              
+              <div class="columns is-centered">
+                <div class="column is-8">
+                  <img src="static/images/picture2.png" alt="Finetuning Pipeline" class="methodology-image">
+                  <p class="has-text-centered image-caption">Our proposed finetuning pipeline. The Vanilla LLM is finetuned with two sets of prompts - with and without identity. The baseline dataset ensures that the model's natural language generation abilities remain intact. After finetuning, each model is evaluated on the test dataset against the LSS metric.</p>
+                </div>
+              </div>
+
+              <h3 class="title is-4">1. Dataset Construction</h3>
+              <p>
+                We created a synthetic dataset for Binary Statutory Reasoning (BSR), which involves determining the applicability of a given law to a situation. The dataset includes:
+              </p>
+              <ul>
+                <li>1500 samples for each identity type</li>
+                <li>74K prompt instances total</li>
+                <li>7% of samples labeled as "YES" (law applies)</li>
+                <li>BSR<sub>with ID</sub>: Dataset with identity information</li>
+                <li>BSR<sub>without ID</sub>: Auxiliary dataset with identity terms removed</li>
+                <li>BSR<sub>Test with ID</sub>: Test dataset with identity terms</li>
+              </ul>
+              
+              <h3 class="title is-4">2. Legal Safety Score (LSS)</h3>
+              <p>
+                We introduced a novel metric to evaluate LLMs in the legal domain:
+              </p>
+              <ul>
+                <li><strong>Relative Fairness Score (RFS)</strong>: Measures proportion of samples where the LLM provides the same prediction regardless of identity</li>
+                <li><strong>F<sub>1</sub> Score</strong>: Measures accuracy of predictions</li>
+                <li><strong>β-weighted Legal Safety Score (LSS<sub>β</sub>)</strong>: Combines RFS and F<sub>1</sub> score to quantify usability</li>
+              </ul>
+              <p>
+                The formula: LSS<sub>β</sub> = (1 + β<sup>2</sup>) × (RFS × F<sub>1</sub>) / (RFS + β<sup>2</sup> × F<sub>1</sub>)
+              </p>
+              
+              <h3 class="title is-4">3. Finetuning for Bias Mitigation</h3>
+              <p>
+                We studied three variants of LLM models:
+              </p>
+              <ul>
+                <li><strong>LLM<sub>Vanilla</sub></strong>: Original model (baseline)</li>
+                <li><strong>LLM<sub>with ID</sub></strong>: Finetuned on BSR<sub>with ID</sub> dataset</li>
+                <li><strong>LLM<sub>without ID</sub></strong>: Finetuned on BSR<sub>without ID</sub> dataset (inspired by Rawls' Veil of Ignorance theory)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End methodology section -->
+
+    <!-- Results Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Results & Discussion</h2>
+            <div class="content has-text-justified">
+              <h3 class="title is-4">Experimental Setup</h3>
+              <p>
+                We evaluated multiple variants of Meta's LLaMA models:
+              </p>
+              <ul>
+                <li>LLaMA 7B</li>
+                <li>LLaMA-2 7B</li>
+                <li>LLaMA-3.1 8B</li>
+              </ul>
+              <p>
+                Models were finetuned using Low-Rank Adaptation (LoRA) on an A100 80GB GPU with float16 precision.
+                We included a validation loss on Penn State Treebank to prevent catastrophic forgetting.
+              </p>
+              
+              <h3 class="title is-4">Key Findings</h3>
+              <ol>
+                <li>Our finetuning strategy progressively increased the LSS for all LLaMA models</li>
+                <li>LLaMA-3<sub>Vanilla</sub> showed significantly higher LSS compared to other models, which improved further after finetuning</li>
+                <li>When β < 1, LSS<sub>β</sub> is primarily controlled by the F<sub>1</sub> score</li>
+                <li>As β increases, LSS<sub>β</sub> becomes dominated by the RFS values</li>
+              </ol>
+
+              <div class="columns is-centered">
+                <div class="column is-8">
+                  <img src="static/images/picture3.png" alt="LSS Trends" class="results-image">
+                  <p class="has-text-centered image-caption">Trends of F1 score, RFS, and LSS across various finetuning checkpoints for the LLaMA models. We observe that the LSS progressively increases with finetuning. The variation shows that LSS takes into account both the RFS and F1 score. The Vanilla LLM corresponds to checkpoint–0, marked separately by ◦.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End results section -->
+
+    <!-- Conclusion Section -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Conclusion & Future Work</h2>
+            <div class="content has-text-justified">
+              <p>
+                Our research explores bias, fairness, and task performance in LLMs within the Indian legal domain, introducing the β-weighted Legal Safety Score to assess a model's fairness and task performance. Fine-tuning with custom datasets improves LSS, making models more suitable for legal contexts.
+              </p>
+              <p>
+                While our findings provide valuable insights, further research is needed to:
+              </p>
+              <ul>
+                <li>Address recent case histories and legal precedents</li>
+                <li>Conduct deeper social group analysis</li>
+                <li>Expand beyond Binary Statutory Reasoning to more complex legal tasks</li>
+              </ul>
+              <p>
+                Our work is a preliminary step toward safer LLM use in the legal field, particularly in socially diverse contexts like India.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End conclusion section -->
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@inbook{Tripathi2024,
+  title = {InSaAF: Incorporating Safety Through Accuracy and Fairness - Are LLMs Ready for the Indian Legal Domain?},
+  ISBN = {9781643685625},
+  ISSN = {1879-8314},
+  url = {http://dx.doi.org/10.3233/FAIA241266},
+  DOI = {10.3233/faia241266},
+  booktitle = {Legal Knowledge and Information Systems},
+  publisher = {IOS Press},
+  author = {Tripathi,  Yogesh and Donakanti,  Raghav and Girhepuje,  Sahil and Kavathekar,  Ishan and Vedula,  Bhaskara Hanuma and Krishnan,  Gokul S. and Goel,  Anmol and Goyal,  Shreya and Ravindran,  Balaraman and Kumaraguru,  Ponnurangam},
+  year = {2024},
+  month = dec 
+}</code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
